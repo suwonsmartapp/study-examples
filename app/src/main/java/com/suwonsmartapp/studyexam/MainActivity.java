@@ -1,11 +1,13 @@
+
 package com.suwonsmartapp.studyexam;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -16,8 +18,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         // Layout 화면 붙이기
         setContentView(R.layout.activity_main);
 
-        Button button = (Button)findViewById(R.id.btn_test);
-        Button button2 = (Button)findViewById(R.id.btn_test2);
+        // 클릭 이벤트
+        clickEventInit();
+
+        // 화면 이동 처리
+        findViewById(R.id.btn_jump).setOnClickListener(this);
+        findViewById(R.id.btn_browser).setOnClickListener(this);
+        findViewById(R.id.btn_jump_target).setOnClickListener(this);
+    }
+
+    private void clickEventInit() {
+        Button button = (Button) findViewById(R.id.btn_test);
+        Button button2 = (Button) findViewById(R.id.btn_test2);
 
         // 첫번째
         button.setOnClickListener(new View.OnClickListener() {
@@ -56,13 +68,30 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         findViewById(R.id.btn_test2).setOnClickListener(this);
     }
 
-
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btn_test) {
-            Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_SHORT).show();
-        } else if (v.getId() == R.id.btn_test2) {
-            Toast.makeText(getApplicationContext(), "click2", Toast.LENGTH_SHORT).show();
+        switch (v.getId()) {
+            case R.id.btn_test:
+                Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_test2:
+                Toast.makeText(getApplicationContext(), "click2", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_jump:
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-4899-3729"));
+                startActivity(intent);
+                break;
+            case R.id.btn_browser:
+                Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com"));
+                startActivity(intent2);
+                break;
+            case R.id.btn_jump_target:
+                Intent intent3 = new Intent(getApplicationContext(), TargetActivity.class);
+                // 넘길 데이터 설정
+                intent3.putExtra("key", "값");
+                intent3.putExtra("key2", "값2");
+                startActivity(intent3);
+                break;
         }
     }
 }

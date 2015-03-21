@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Study Exam</string>
 
-    <string name="hello_world">Hello world! HaHaHa</string>
+    <string name="hello_world">헬로 월드! 하하하</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_target">TargetActivity</string>
 </resources>
