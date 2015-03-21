@@ -39,4 +39,10 @@
         android:layout_height="wrap_content"
         android:text="TargetActivity　띄우기" />
 
+    <Button
+        android:id="@+id/btn_jump_target2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TargetActivity　띄우고 뭔가 받기" />
+
 </LinearLayout>

@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
+    private static final int JUMP_REQEUST_CODE = 1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         findViewById(R.id.btn_jump).setOnClickListener(this);
         findViewById(R.id.btn_browser).setOnClickListener(this);
         findViewById(R.id.btn_jump_target).setOnClickListener(this);
+        // 띄우고 받기
+        findViewById(R.id.btn_jump_target2).setOnClickListener(this);
     }
 
     private void clickEventInit() {
@@ -92,6 +96,24 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 intent3.putExtra("key2", "값2");
                 startActivity(intent3);
                 break;
+            case R.id.btn_jump_target2:
+                Intent intent4 = new Intent(getApplicationContext(), TargetActivity.class);
+                startActivityForResult(intent4, JUMP_REQEUST_CODE);
+                break;
+
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == JUMP_REQEUST_CODE) {
+                String result = data.getStringExtra("result");
+                Toast.makeText(getApplicationContext(), "result : " + result, Toast.LENGTH_SHORT)
+                        .show();
+            }
         }
     }
 }
