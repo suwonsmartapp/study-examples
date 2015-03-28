@@ -18,7 +18,11 @@
         </activity>
         <activity
             android:name=".TargetActivity"
-            android:label="@string/title_activity_target"></activity>
+            android:label="@string/title_activity_target" />
+        <activity
+            android:name=".ListViewActivity"
+            android:label="@string/title_activity_list_view"
+            android:theme="@style/Base.Theme.AppCompat"></activity>
     </application>
 
 </manifest>

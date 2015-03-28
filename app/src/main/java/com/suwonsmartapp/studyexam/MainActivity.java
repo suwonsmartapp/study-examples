@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+// 195~220
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
     private static final int JUMP_REQEUST_CODE = 1000;
@@ -29,6 +30,48 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         findViewById(R.id.btn_jump_target).setOnClickListener(this);
         // 띄우고 받기
         findViewById(R.id.btn_jump_target2).setOnClickListener(this);
+
+        // ListView
+        findViewById(R.id.btn_listview).setOnClickListener(this);
+    }
+
+    // Activity 가 소멸 될 때 호출 됨
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // 메모리 해제 등
+    }
+
+    // 화면이 안 보일 때 호출
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+    }
+
+    // 화면이 안 보여지기 직전에 호출
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    // onPause에서 다시 화면이 보여지기 직전에 호출
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    // 보이기 바로 전에 호출
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    // 보여졌을 때 호출
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     private void clickEventInit() {
@@ -100,7 +143,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 Intent intent4 = new Intent(getApplicationContext(), TargetActivity.class);
                 startActivityForResult(intent4, JUMP_REQEUST_CODE);
                 break;
-
+            case R.id.btn_listview:
+                startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
+                break;
         }
     }
 
@@ -116,4 +161,5 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
         }
     }
+
 }

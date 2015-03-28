@@ -9,40 +9,71 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_test2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_jump"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dial 화면 띄우기" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acitivity"
+                android:textSize="40sp" />
 
-    <Button
-        android:id="@+id/btn_browser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Web 브라우저 띄우기" />
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_world" />
 
-    <Button
-        android:id="@+id/btn_jump_target"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TargetActivity　띄우기" />
+            <Button
+                android:id="@+id/btn_test2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_world" />
 
-    <Button
-        android:id="@+id/btn_jump_target2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TargetActivity　띄우고 뭔가 받기" />
+            <Button
+                android:id="@+id/btn_jump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dial 화면 띄우기" />
+
+            <Button
+                android:id="@+id/btn_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web 브라우저 띄우기" />
+
+            <Button
+                android:id="@+id/btn_jump_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TargetActivity　띄우기" />
+
+            <Button
+                android:id="@+id/btn_jump_target2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TargetActivity　띄우고 뭔가 받기" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ListView"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="listview" />
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </LinearLayout>
