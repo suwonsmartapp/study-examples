@@ -17,6 +17,10 @@ public class ProgressbarThreadHandlerActivity extends ActionBarActivity implemen
         View.OnClickListener {
 
     private static final String TAG = ProgressbarThreadHandlerActivity.class.getSimpleName();
+
+    private static final int MESSAGE_UPDATE_TEXT = 0;
+    private static final int MESSAGE_SHOW_DIALOG = 1;
+
     private ProgressBar mProgressBar;
     private int value;
     private boolean runnnig;
@@ -24,32 +28,36 @@ public class ProgressbarThreadHandlerActivity extends ActionBarActivity implemen
     private TextView mTextView;
 
     // 1. 핸들러 객체 만드는 방법
-    private Handler mProgressHandler = new Handler() {
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            mTextView.setText(mProgressBar.getProgress() + "%");
+            switch (msg.what) {
+                case MESSAGE_UPDATE_TEXT:
+                    mTextView.setText(mProgressBar.getProgress() + "%");
+                    break;
+                case MESSAGE_SHOW_DIALOG:
+                    showDialog();
+                    break;
+            }
         }
     };
 
-    private Handler mDialogHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            // 다이얼로그 띄우기
-            AlertDialog.Builder builder = new AlertDialog.Builder(
-                    ProgressbarThreadHandlerActivity.this);
-            builder.setTitle("알림");
-            builder.setMessage("다운로드 완료");
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(ProgressbarThreadHandlerActivity.this, "OK", Toast.LENGTH_SHORT)
-                            .show();
-                }
-            });
-            builder.setNegativeButton("cancel", null);
-            builder.show();
-        }
-    };
+    private void showDialog() {
+        // 다이얼로그 띄우기
+        AlertDialog.Builder builder = new AlertDialog.Builder(
+                ProgressbarThreadHandlerActivity.this);
+        builder.setTitle("알림");
+        builder.setMessage("다운로드 완료");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(ProgressbarThreadHandlerActivity.this, "OK", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
+        builder.setNegativeButton("cancel", null);
+        builder.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +93,7 @@ public class ProgressbarThreadHandlerActivity extends ActionBarActivity implemen
                         mProgressBar.setProgress(value);
 
                         // 1. 핸들러 객체 만드는 방법
-                        mProgressHandler.sendEmptyMessage(0);
+                        handler.sendEmptyMessage(MESSAGE_UPDATE_TEXT);
 
                     } catch (InterruptedException e) {
                         Log.e(TAG, "익셉션 !!!!");
@@ -94,7 +102,7 @@ public class ProgressbarThreadHandlerActivity extends ActionBarActivity implemen
                     if (value > mProgressBar.getMax()) {
                         runnnig = false;
 
-                        mDialogHandler.sendEmptyMessage(0);
+                        handler.sendEmptyMessage(MESSAGE_SHOW_DIALOG);
                     }
                 }
             }
