@@ -33,6 +33,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // ListView
         findViewById(R.id.btn_listview).setOnClickListener(this);
+
+        // 441쪽 스레드
+        findViewById(R.id.btn_thread).setOnClickListener(this);
+
+        // 445쪽 스레드
+        findViewById(R.id.btn_thread_handler).setOnClickListener(this);
     }
 
     // Activity 가 소멸 될 때 호출 됨
@@ -145,6 +151,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.btn_listview:
                 startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
+            case R.id.btn_thread:
+                startActivity(new Intent(getApplicationContext(), ThreadActivity.class));
+            case R.id.btn_thread_handler:
+                startActivity(new Intent(getApplicationContext(),
+                        ProgressbarThreadHandlerActivity.class));
                 break;
         }
     }

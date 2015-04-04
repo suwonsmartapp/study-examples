@@ -71,6 +71,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="listview" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thread 441쪽"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn_thread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="441쪽 스레드 예제" />
+
+            <Button
+                android:id="@+id/btn_thread_handler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="447쪽 프로그레스바 예제" />
+
+
         </LinearLayout>
 
 

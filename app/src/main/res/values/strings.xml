@@ -5,4 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_target">TargetActivity</string>
     <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="title_activity_thread">ThreadActivity</string>
+    <string name="title_activity_progressbar_thread_handler">ProgressbarThreadHandlerActivity
+    </string>
 </resources>
