@@ -1,6 +1,8 @@
 
 package com.suwonsmartapp.studyexam;
 
+import com.suwonsmartapp.studyexam.db.DbActivity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,6 +41,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // 445쪽 스레드
         findViewById(R.id.btn_thread_handler).setOnClickListener(this);
+
+        // 552쪽 DB
+        findViewById(R.id.btn_create_helper).setOnClickListener(this);
     }
 
     // Activity 가 소멸 될 때 호출 됨
@@ -151,11 +156,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.btn_listview:
                 startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
+                break;
             case R.id.btn_thread:
                 startActivity(new Intent(getApplicationContext(), ThreadActivity.class));
+                break;
             case R.id.btn_thread_handler:
                 startActivity(new Intent(getApplicationContext(),
                         ProgressbarThreadHandlerActivity.class));
+                break;
+            case R.id.btn_create_helper:
+                startActivity(new Intent(getApplicationContext(), DbActivity.class));
                 break;
         }
     }

@@ -90,6 +90,17 @@
                 android:layout_height="wrap_content"
                 android:text="447쪽 프로그레스바 예제" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Database" />
+
+            <Button
+                android:id="@+id/btn_create_helper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Helper 클래스 작성" />
+
 
         </LinearLayout>
 

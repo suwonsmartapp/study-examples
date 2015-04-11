@@ -25,10 +25,14 @@
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".ThreadActivity"
-            android:label="@string/title_activity_thread"></activity>
+            android:label="@string/title_activity_thread" />
         <activity
             android:name=".ProgressbarThreadHandlerActivity"
-            android:label="@string/title_activity_progressbar_thread_handler"></activity>
+            android:label="@string/title_activity_progressbar_thread_handler" />
+        <activity
+            android:name=".db.DbActivity"
+            android:label="@string/title_activity_db"
+            android:theme="@style/Base.Theme.AppCompat"></activity>
     </application>
 
 </manifest>

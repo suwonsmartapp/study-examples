@@ -8,4 +8,5 @@
     <string name="title_activity_thread">ThreadActivity</string>
     <string name="title_activity_progressbar_thread_handler">ProgressbarThreadHandlerActivity
     </string>
+    <string name="title_activity_db">DbActivity</string>
 </resources>
