@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.suwonsmartapp.studyexam" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -47,6 +49,8 @@
                 <action android:name="com.suwonsmartapp.hello.TestBroadcast" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".chat.ClientActivity" />
     </application>
 
 </manifest>

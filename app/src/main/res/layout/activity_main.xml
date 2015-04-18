@@ -112,6 +112,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BroadcastReceiver" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소켓 프로그래밍" />
+
+            <Button
+                android:id="@+id/btn_client"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="채팅 클라이언트" />
         </LinearLayout>
 
 
