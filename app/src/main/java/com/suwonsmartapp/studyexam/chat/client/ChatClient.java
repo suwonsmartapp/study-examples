@@ -7,6 +7,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class ChatClient {
+	// suwonsmartapp.iptime.org
 	private final static String SERVER_HOST = "192.168.0.222";
 	private final static int SERVER_PORT = 5000;
 	
@@ -22,7 +23,7 @@ public class ChatClient {
 		try {
 			mSocket = new Socket(SERVER_HOST, SERVER_PORT);
 
-			mReceiveThread = new ClientReciver(mSocket, "닉네임");
+			mReceiveThread = new ClientReciver(mSocket, "오준석");
 			mReceiveThread.start();
 			
 		} catch (UnknownHostException e) {
