@@ -1,6 +1,7 @@
 
 package com.suwonsmartapp.studyexam;
 
+import com.suwonsmartapp.studyexam.broadcast.BroadcastActivity;
 import com.suwonsmartapp.studyexam.db.DbActivity;
 
 import android.content.Intent;
@@ -44,6 +45,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // 552쪽 DB
         findViewById(R.id.btn_create_helper).setOnClickListener(this);
+
+        findViewById(R.id.btn_send_broadcast).setOnClickListener(this);
     }
 
     // Activity 가 소멸 될 때 호출 됨
@@ -166,6 +169,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.btn_create_helper:
                 startActivity(new Intent(getApplicationContext(), DbActivity.class));
+                break;
+            case R.id.btn_send_broadcast:
+                startActivity(new Intent(getApplicationContext(), BroadcastActivity.class));
                 break;
         }
     }

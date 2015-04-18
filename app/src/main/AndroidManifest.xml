@@ -32,7 +32,21 @@
         <activity
             android:name=".db.DbActivity"
             android:label="@string/title_activity_db"
-            android:theme="@style/Base.Theme.AppCompat"></activity>
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".broadcast.BroadcastActivity"
+            android:label="@string/title_activity_broadcast"></activity>
+
+        <!-- Global 브로드캐스트 리시버 등록 -->
+        <receiver
+            android:name=".broadcast.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="com.suwonsmartapp.hello.TestBroadcast" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
