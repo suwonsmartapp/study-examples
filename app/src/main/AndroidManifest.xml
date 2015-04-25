@@ -37,13 +37,13 @@
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".broadcast.BroadcastActivity"
-            android:label="@string/title_activity_broadcast"></activity>
+            android:label="@string/title_activity_broadcast" />
 
         <!-- Global 브로드캐스트 리시버 등록 -->
         <receiver
             android:name=".broadcast.MyReceiver"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_LOW" />
                 <action android:name="com.suwonsmartapp.hello.TestBroadcast" />
@@ -51,6 +51,8 @@
         </receiver>
 
         <activity android:name=".chat.ClientActivity" />
+
+        <activity android:name=".cal.CalendarActivity" />
     </application>
 
 </manifest>

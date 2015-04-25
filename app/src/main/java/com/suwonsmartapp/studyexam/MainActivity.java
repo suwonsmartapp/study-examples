@@ -2,6 +2,7 @@
 package com.suwonsmartapp.studyexam;
 
 import com.suwonsmartapp.studyexam.broadcast.BroadcastActivity;
+import com.suwonsmartapp.studyexam.cal.CalendarActivity;
 import com.suwonsmartapp.studyexam.chat.ClientActivity;
 import com.suwonsmartapp.studyexam.db.DbActivity;
 
@@ -37,6 +38,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // ListView
         findViewById(R.id.btn_listview).setOnClickListener(this);
+
+        // 달력 GridView
+        findViewById(R.id.btn_gridview).setOnClickListener(this);
 
         // 441쪽 스레드
         findViewById(R.id.btn_thread).setOnClickListener(this);
@@ -164,6 +168,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.btn_listview:
                 startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
+                break;
+            case R.id.btn_gridview:
+                startActivity(new Intent(getApplicationContext(), CalendarActivity.class));
                 break;
             case R.id.btn_thread:
                 startActivity(new Intent(getApplicationContext(), ThreadActivity.class));

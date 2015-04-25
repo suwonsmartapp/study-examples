@@ -2,14 +2,14 @@
 package com.suwonsmartapp.studyexam;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ListViewActivity extends ActionBarActivity {
+public class ListViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
