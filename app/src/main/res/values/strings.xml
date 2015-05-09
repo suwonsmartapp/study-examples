@@ -11,4 +11,5 @@
     <string name="title_activity_db">DbActivity</string>
     <string name="title_activity_broadcast">BroadcastActivity</string>
     <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="title_activity_multimedia">MultimediaActivity</string>
 </resources>

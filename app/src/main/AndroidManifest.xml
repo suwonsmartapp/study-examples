@@ -51,8 +51,11 @@
         </receiver>
 
         <activity android:name=".chat.ClientActivity" />
-
         <activity android:name=".cal.CalendarActivity" />
+        <activity
+            android:name=".multimedia.MultimediaActivity"
+            android:label="@string/title_activity_multimedia" >
+        </activity>
     </application>
 
 </manifest>

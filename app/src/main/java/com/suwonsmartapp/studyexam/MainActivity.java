@@ -5,6 +5,7 @@ import com.suwonsmartapp.studyexam.broadcast.BroadcastActivity;
 import com.suwonsmartapp.studyexam.cal.CalendarActivity;
 import com.suwonsmartapp.studyexam.chat.ClientActivity;
 import com.suwonsmartapp.studyexam.db.DbActivity;
+import com.suwonsmartapp.studyexam.multimedia.MultimediaActivity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -56,6 +57,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // 채팅 클라이언트
         findViewById(R.id.btn_client).setOnClickListener(this);
+
+
+        // 멀티미디어
+        findViewById(R.id.btn_multimedia).setOnClickListener(this);
     }
 
     // Activity 가 소멸 될 때 호출 됨
@@ -188,6 +193,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.btn_client:
                 startActivity(new Intent(getApplicationContext(), ClientActivity.class));
                 break;
+            case R.id.btn_multimedia:
+                startActivity(new Intent(getApplicationContext(), MultimediaActivity.class));
+                break;
+
         }
     }
 

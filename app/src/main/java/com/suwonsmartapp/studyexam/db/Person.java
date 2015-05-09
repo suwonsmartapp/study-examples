@@ -8,6 +8,9 @@ public class Person {
     private String name;
     private String email;
 
+    public Person() {
+    }
+
     public Person(String email, String name) {
         this.email = email;
         this.name = name;
@@ -28,4 +31,6 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }

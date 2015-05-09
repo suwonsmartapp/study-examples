@@ -129,6 +129,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="채팅 클라이언트" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멀티미디어" />
+
+            <Button
+                android:id="@+id/btn_multimedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="음악 재생" />
         </LinearLayout>
 
 
