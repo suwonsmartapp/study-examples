@@ -1,7 +1,5 @@
 package com.suwonsmartapp.studyexam.multimedia;
 
-import com.suwonsmartapp.studyexam.R;
-
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,6 +11,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.suwonsmartapp.studyexam.R;
 
 import java.io.IOException;
 

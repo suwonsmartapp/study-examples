@@ -58,19 +58,23 @@
 
             <!-- 실행 아이콘 여러개로 하고 싶을 때 intent-filter를 Activity 마다 추가 하면 됨 -->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="audio/*" />
-            <!--</intent-filter>-->
 
-            <!--&lt;!&ndash; audio 파일을 받아서 재생할 대상으로 지정 하는 방법 &ndash;&gt;-->
-            <!--<intent-filter>-->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="audio/*" />
+                <!-- </intent-filter> -->
+
+
+                <!-- &lt;!&ndash; audio 파일을 받아서 재생할 대상으로 지정 하는 방법 &ndash;&gt; -->
+                <!-- <intent-filter> -->
 
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".FragmentExamActivity"
+            android:label="@string/title_activity_fragment_exam" >
         </activity>
     </application>
 

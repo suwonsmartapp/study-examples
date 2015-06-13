@@ -12,4 +12,8 @@
     <string name="title_activity_broadcast">BroadcastActivity</string>
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="title_activity_multimedia">MultimediaActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fragment_exam">FragmentExamActivity</string>
 </resources>
