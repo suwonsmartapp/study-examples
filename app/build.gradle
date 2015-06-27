@@ -21,6 +21,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.0'
+//    compile 'com.android.support:appcompat-v7:22.1.0'
     compile 'de.greenrobot:eventbus:2.4.0'
+
+    // design 라이브러리 : appcompat-v7 ( support-v4 )
+    compile 'com.android.support:design:22.2.0'
 }

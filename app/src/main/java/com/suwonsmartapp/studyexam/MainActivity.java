@@ -1,6 +1,12 @@
 
 package com.suwonsmartapp.studyexam;
 
+import com.suwonsmartapp.studyexam.broadcast.BroadcastActivity;
+import com.suwonsmartapp.studyexam.cal.CalendarActivity;
+import com.suwonsmartapp.studyexam.chat.ClientActivity;
+import com.suwonsmartapp.studyexam.db.DbActivity;
+import com.suwonsmartapp.studyexam.multimedia.MultimediaActivity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,12 +14,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import com.suwonsmartapp.studyexam.broadcast.BroadcastActivity;
-import com.suwonsmartapp.studyexam.cal.CalendarActivity;
-import com.suwonsmartapp.studyexam.chat.ClientActivity;
-import com.suwonsmartapp.studyexam.db.DbActivity;
-import com.suwonsmartapp.studyexam.multimedia.MultimediaActivity;
 
 // 195~220
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -64,6 +64,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         // 프래그먼트
         findViewById(R.id.btn_fragment).setOnClickListener(this);
+
+        // 툴바
+        findViewById(R.id.btn_toolbar).setOnClickListener(this);
     }
 
     // Activity 가 소멸 될 때 호출 됨
@@ -201,6 +204,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.btn_fragment:
                 startActivity(new Intent(getApplicationContext(), FragmentExamActivity.class));
+                break;
+
+            case R.id.btn_toolbar:
+                startActivity(new Intent(getApplicationContext(), ToolbarActivity.class));
                 break;
 
         }

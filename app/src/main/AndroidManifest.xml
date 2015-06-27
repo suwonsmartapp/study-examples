@@ -76,6 +76,10 @@
             android:name=".FragmentExamActivity"
             android:label="@string/title_activity_fragment_exam" >
         </activity>
+
+        <activity
+            android:name=".ToolbarActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
