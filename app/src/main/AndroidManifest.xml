@@ -78,8 +78,10 @@
         </activity>
 
         <activity
-            android:name=".ToolbarActivity"
+            android:name=".ToolbarActivity2"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity android:name=".broadcast.BroadcastActivity" />
     </application>
 
 </manifest>
