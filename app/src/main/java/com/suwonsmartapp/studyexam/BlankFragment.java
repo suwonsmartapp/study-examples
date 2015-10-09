@@ -26,7 +26,7 @@ public class BlankFragment extends Fragment {
     private String mParam2;
 
 /** 테스트 입니다 **/
-    
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

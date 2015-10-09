@@ -73,7 +73,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FragmentExamActivity"
+            android:name=".FragmentExamActivity2"
             android:label="@string/title_activity_fragment_exam" >
         </activity>
 
