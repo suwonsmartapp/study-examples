@@ -22,7 +22,6 @@ public class BlankFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
 
 /** 테스트 입니다 **/
     
