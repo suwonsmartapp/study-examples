@@ -23,7 +23,6 @@ public class BlankFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private String mParam1;
-    private String mParam2;
 
 /** 테스트 입니다 **/
     
