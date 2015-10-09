@@ -78,7 +78,7 @@
         </activity>
 
         <activity
-            android:name=".ToolbarActivity2"
+            android:name=".ToolbarActivity4"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <activity android:name=".broadcast.BroadcastActivity" />
